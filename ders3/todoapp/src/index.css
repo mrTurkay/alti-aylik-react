@@ -1,0 +1,6 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #ea5959;
+  font-family: Arial, Helvetica, sans-serif;
+}
