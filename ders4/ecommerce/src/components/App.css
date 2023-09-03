@@ -1,0 +1,117 @@
+.AppWrapper {
+  height: 100vh;
+  width: 100vw;
+  background: #ededed;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 16px;
+  height: 95%;
+}
+
+.sidebarWrapper {
+  height: 100%;
+  width: 72px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebarTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.productCardWrapper {
+  width: 230px;
+  height: 400px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.productListWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productCardImage {
+  max-height: 232px;
+  border-radius: 22px;
+}
+
+.productTitleCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.productTitle {
+  color: var(--font-dark, #1a1f16);
+  font-family: Cabin;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.productCategory {
+  color: var(--font-tertiary, #60695c);
+  /* Body/Small/Regular/Condensed */
+  font-family: Cabin;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.productPrice {
+  color: var(--font-dark, #1a1f16);
+  /* Body/Normal/Medium/Normal */
+  font-family: Cabin;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.productCardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.priceWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addCartButton {
+  background: black;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
