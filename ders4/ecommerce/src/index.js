@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Home from "./components/Home";
 import ProductDetails from "./components/ProductDetails";
+import { BagProvider } from "./contexts/BagContext";
 
 const router = createBrowserRouter([
   {
@@ -18,4 +19,8 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={router} />);
+root.render(
+  <BagProvider>
+    <RouterProvider router={router} />
+  </BagProvider>
+);

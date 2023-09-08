@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { CartIcon } from "../../assets";
+import { useBag } from "../../contexts/BagContext";
 
 const ProductCard = ({ product }) => {
+  const { addProductToBag } = useBag();
   return (
     <div className="productCardWrapper">
       <img
@@ -18,7 +20,13 @@ const ProductCard = ({ product }) => {
         </Link>
         <div className="priceWrapper">
           <span className="productPrice">${product.price}</span>
-          <button className="addCartButton">
+          <button
+            className="addCartButton"
+            onClick={() => {
+              console.log(product, "click");
+              addProductToBag(product);
+            }}
+          >
             <CartIcon />
           </button>
         </div>
