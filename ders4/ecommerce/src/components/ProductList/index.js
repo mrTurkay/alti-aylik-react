@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../ProductCard";
 
-const ProductList = () => {
+const ProductList = ({ searchTerm }) => {
   const [products, setProducts] = useState();
 
   useEffect(() => {
@@ -16,9 +16,17 @@ const ProductList = () => {
 
   return (
     <div className="productListWrapper">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      {products
+        .filter((product) =>
+          searchTerm
+            ? product.title
+                .toLocaleLowerCase()
+                .includes(searchTerm.toLocaleLowerCase())
+            : true
+        )
+        .map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
     </div>
   );
 };

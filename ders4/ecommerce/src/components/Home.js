@@ -1,10 +1,10 @@
 import "./App.css";
-import ContentWrapper from "./ContentWrapper";
+import HomeContent from "./HomeContent";
 import Layout from "./Layout";
 
 const Home = () => (
   <Layout>
-    <ContentWrapper />
+    <HomeContent />
   </Layout>
 );
 

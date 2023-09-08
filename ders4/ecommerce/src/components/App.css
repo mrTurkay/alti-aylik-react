@@ -67,12 +67,13 @@
 }
 
 .productTitle {
-  color: var(--font-dark, #1a1f16);
-  font-family: Cabin;
+  color: #1a1f16;
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
+}
+
+.productTitle a {
+  text-decoration-line: none;
 }
 
 .productCategory {
@@ -114,4 +115,31 @@
   border: none;
   outline: none;
   border-radius: 8px;
+}
+
+.searchInputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 500px;
+}
+
+.searchInputText {
+  font-size: 16px;
+  color: #60695c;
+}
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  height: 56px;
+  padding: 8px 16px;
+  font-size: 20px;
+  gap: 8px;
+  border-radius: 16px;
+  border: none;
+  background: #fff;
+  box-shadow: 0px 4px 16px 0px rgba(26, 31, 22, 0.15);
 }
