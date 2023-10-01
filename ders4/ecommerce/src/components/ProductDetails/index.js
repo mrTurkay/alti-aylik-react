@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Layout from "../Layout";
 import { CartIcon } from "../../assets";
 import { useBag } from "../../contexts/BagContext";
+import api from "../../apiClient";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -10,9 +11,7 @@ const ProductDetails = () => {
   const { addProductToBag } = useBag();
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
-      .then((res) => res.json())
-      .then((json) => setProduct(json));
+    api.get(`products/${id}`).then((res) => setProduct(res.data));
   }, [id]);
 
   if (!product) {
